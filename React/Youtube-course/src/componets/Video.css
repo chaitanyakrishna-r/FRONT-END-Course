@@ -1,0 +1,33 @@
+.container{
+    border: 2px solid black;
+    border-radius:8px;
+    background-color: black;
+    color:white;
+    width :18em;
+    margin: 0 0.4em;
+    padding:8px;
+    float:left;
+}
+.title{
+    font-weight: bold;
+    font-size:25px;
+    color:white;
+  }
+.channel{
+    display:flex;
+    align-item:center;
+    gap:40px;
+    font-size:16px;
+    color:#ccc;
+}
+.views{
+    display:flex;
+    align-item:center;
+    gap:40px;
+    color:#ccc;
+    margin-bottom: 20px;
+}
+.pic img{
+    width:100%;
+    margin-bottom:10px;
+}
