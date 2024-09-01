@@ -1,14 +1,15 @@
+
 import './App.css';
 
-import VideoList from './componets/VideoList'; 
+import VideoList from './componets/VideoList';
+import Addvideo from './componets/Addvideo'; 
 import data from './data/data'
 
 function App() {
   return (
   <>
-    <div className="App">
-      <h1>Hello YouTube</h1>
-    </div>
+  
+    <Addvideo></Addvideo>
     <VideoList videoDB={data} ></VideoList>
   
   </>
