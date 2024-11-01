@@ -48,11 +48,15 @@ else{
 
 //strings
 
-let firstName = 'chaitanya krishna';
-let lastName = "hey how are you ";
-let name = `hello 
-how are you `;
+let fName = 'chaiTanyakRishna';
+let lName = "hey hOw Are you ";
+console.log(fName.toUpperCase());
+console.log(lName.toLowerCase());
 
-console.log(typeof(lastName));
-console.log(typeof(firstName));
-console.log(typeof(name));
+console.log(fName.substring(9,14));
+let words = (lName.split(" "));
+// console.log(words);
+console.log(words.join(","));
+
+let last = fName+lName;
+console.log(last.length);
