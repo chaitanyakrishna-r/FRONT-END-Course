@@ -14,6 +14,7 @@ class Human{
         this.age = newAge;
         this.#wt = Newwt;
     }
+    
     // behaviour
     walking(){
         console.log("I'm walking ");
@@ -29,6 +30,7 @@ class Human{
     set modifyWt(valu){
         this.#wt=valu
     }
+    
 }
 
 let obj = new Human("ck",20,70);
@@ -39,6 +41,7 @@ console.log(obj.fetchWt);
 obj.modifyWt = 29;
 console.log(obj.fetchWt);
 // obj.running();
+
 
 // console.log(obj.fetchWt);
 // obj.modifyWt =78 ;
