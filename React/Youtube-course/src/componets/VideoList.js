@@ -2,7 +2,7 @@ import React from 'react';
 import Videos from './Videos'
 import Playbutton from './Playbutton';
 
-export default function VideoList({videoDB}) {
+export default function VideoList({videoDB,deleteVideo,editVideo,dispatch}) {
   return (
     <>
     {
@@ -14,19 +14,17 @@ export default function VideoList({videoDB}) {
         time = {video.time}
         verfied = {video.verfied}
         id = {video.id}
+        deleteVideo={deleteVideo}
+        editVideo={editVideo}
+        dispatch={dispatch}
         >
         <Playbutton
         onPlay ={()=>{console.log('playing',video.title)}}
         onPause ={()=>{console.log('Paused')}}
         >{video.title}</Playbutton>    
 
-        </Videos>
-
-        )
-
-        )
-
-        }
+        </Videos>))
+      }
     </>
   )
 }

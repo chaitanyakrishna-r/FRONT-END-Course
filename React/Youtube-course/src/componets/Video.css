@@ -7,6 +7,7 @@
     margin: 0 0.4em;
     padding:8px;
     float:left;
+    position:relative;
 }
 .title{
     font-weight: bold;
@@ -30,4 +31,8 @@
 .pic img{
     width:100%;
     margin-bottom:10px;
+}
+.delete{
+    position: absolute;
+    right: 0;
 }
