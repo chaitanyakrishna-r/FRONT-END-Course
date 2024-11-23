@@ -1,8 +1,11 @@
-import React from 'react';
+
 import Videos from './Videos'
 import Playbutton from './Playbutton';
+import useVidoes from '../hooks/Videos';
 
-export default function VideoList({videoDB,deleteVideo,editVideo,dispatch}) {
+export default function VideoList({editVideo}) {
+ 
+  const videoDB = useVidoes();
   return (
     <>
     {
@@ -14,9 +17,9 @@ export default function VideoList({videoDB,deleteVideo,editVideo,dispatch}) {
         time = {video.time}
         verfied = {video.verfied}
         id = {video.id}
-        deleteVideo={deleteVideo}
+       
         editVideo={editVideo}
-        dispatch={dispatch}
+        
         >
         <Playbutton
         onPlay ={()=>{console.log('playing',video.title)}}

@@ -1,9 +1,13 @@
 // import { Children } from "react";
+// import { useContext } from "react";
 import "./Video.css";
+// import VideoDispatch from "../context/VideoDispatch";
+import useVidoeDispatch from "../hooks/vidoeDispatch";
 
-function Videos({title,channel,verfied,views,time,id,children,editVideo,dispatch}){
+function Videos({title,channel,verfied,views,time,id,children,editVideo}){
     
-
+    // const dispatch = useContext(VideoDispatch);
+    const dispatch = useVidoeDispatch();
     return(
     <>
     <div className="container">

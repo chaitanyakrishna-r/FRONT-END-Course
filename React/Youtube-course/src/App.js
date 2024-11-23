@@ -3,7 +3,12 @@ import './App.css';
 import VideoList from './componets/VideoList';
 import Addvideo from './componets/Addvideo'; 
 import data from './data/data';
-import { useReducer, useState } from 'react';
+import { useContext, useReducer, useState } from 'react';
+import ThemeContext from './context/ThemeContext'
+import VideosContext from './context/VideosContext';
+import VideoDispatch from './context/VideoDispatch';
+
+
 
 
 function App() {
@@ -11,6 +16,9 @@ function App() {
   // const[videos, setVidoes]=useState(data);
   const[editableVideo,setEditableVideo] = useState(null);
 
+
+  const theme = useContext(ThemeContext);
+  
 
   function videoReducer(videos,action ){
     switch(action.type){
@@ -61,13 +69,17 @@ function App() {
   
   return (
   <>
-  
-    <Addvideo dispatch={dispatch} editableVideo={editableVideo} ></Addvideo>
-    <VideoList videoDB={videos} dispatch={dispatch} editVideo={editVideo}></VideoList>
+    <VideosContext.Provider value={videos}>
+      <VideoDispatch.Provider  value={dispatch}>
+        <Addvideo  editableVideo={editableVideo} ></Addvideo>
+        <VideoList   editVideo={editVideo}></VideoList>
+        <h1 className={`${theme}`}>Hello world</h1>
+      </VideoDispatch.Provider>
+    </VideosContext.Provider>
   
   </>
 
-  );
+  );    
 }
 
 export default App;
