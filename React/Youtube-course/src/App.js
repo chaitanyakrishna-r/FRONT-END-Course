@@ -7,6 +7,7 @@ import { useContext, useReducer, useState } from 'react';
 import ThemeContext from './context/ThemeContext'
 import VideosContext from './context/VideosContext';
 import VideoDispatch from './context/VideoDispatch';
+import Counter from './componets/Counter';
 
 
 
@@ -17,11 +18,14 @@ function App() {
   const[editableVideo,setEditableVideo] = useState(null);
 
 
+
   const theme = useContext(ThemeContext);
   
 
   function videoReducer(videos,action ){
+
     switch(action.type){
+   
       case 'ADD':
         return [...videos,{...action.playload,
           id:videos.length+1}];
@@ -71,9 +75,15 @@ function App() {
   <>
     <VideosContext.Provider value={videos}>
       <VideoDispatch.Provider  value={dispatch}>
+
+        <Counter>
+          
+        </Counter>
         <Addvideo  editableVideo={editableVideo} ></Addvideo>
         <VideoList   editVideo={editVideo}></VideoList>
         <h1 className={`${theme}`}>Hello world</h1>
+
+
       </VideoDispatch.Provider>
     </VideosContext.Provider>
   

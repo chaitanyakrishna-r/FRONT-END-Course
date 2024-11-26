@@ -1,11 +1,25 @@
 
 import Videos from './Videos'
 import Playbutton from './Playbutton';
-import useVidoes from '../hooks/Videos';
+// import useVidoes from '../hooks/Videos';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 
 export default function VideoList({editVideo}) {
- 
-  const videoDB = useVidoes();
+  
+  const url ='https://my.api.mockaroo.com/videos.json?key=3b4f37b0';
+  const [videoDB,setVideoDB] = useState([]);
+
+  async function handleApi(){
+    console.log("get Video")
+    const response = await axios.get(url);
+    console.log(response);
+    setVideoDB(response.data);
+  }
+  useEffect(()=>{
+      handleApi();
+  },[])
+  // const videoDB = useVidoes();
   return (
     <>
     {
@@ -28,6 +42,7 @@ export default function VideoList({editVideo}) {
 
         </Videos>))
       }
+      <button onClick={handleApi}>Get Vidoes</button>
     </>
   )
 }
