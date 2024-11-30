@@ -14,3 +14,4 @@ export default function Playbutton({children,onPause,onPlay}) {
     <div className='play' onClick={handlePlay}>{children} {playing? "▶️ play":"⏸️ pause"}</div>
   )
 }
+console.log(helo);
