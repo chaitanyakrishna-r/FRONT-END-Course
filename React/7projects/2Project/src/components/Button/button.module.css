@@ -10,4 +10,20 @@
     justify-content: center;
     gap: 8px;
     font-size: 16px;
+    cursor: pointer;
+}
+.outline_btn{
+    all: unset;
+    padding:18px 10px;
+    border: 1px solid black;
+    color: black;
+    border-radius: 5px;
+    min-width: 220px;
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 16px;
+    width: 100%;
+    cursor: pointer;
 }

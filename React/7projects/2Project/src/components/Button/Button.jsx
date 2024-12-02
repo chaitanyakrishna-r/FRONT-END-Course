@@ -1,9 +1,10 @@
-
 import styles from './button.module.css'
-const Button = ({text,icons}) => {
-    console.log(styles)
+
+
+const Button = ({text,icons,isOutline,}) => {
   return (
-   <button className={styles.primary_btn}>
+   <button
+    className={isOutline ? styles.outline_btn : styles.primary_btn}>
         {icons}
         {text}
    </button>
