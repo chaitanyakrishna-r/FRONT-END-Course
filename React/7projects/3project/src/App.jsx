@@ -8,7 +8,7 @@ import GamePlay from './components/GamePlay';
 
 function App() {
   
-  const [isGameOn,setIsGameOn]=useState(true);
+  const [isGameOn,setIsGameOn]=useState(false);
 
   const toggleGamePlay =()=>{
     setIsGameOn(!isGameOn);
