@@ -8,6 +8,8 @@ function App() {
   return (
     <>
       <Navigation />
+      # write a program to add two nubmers
+      
       <Hero />
       
     </>
