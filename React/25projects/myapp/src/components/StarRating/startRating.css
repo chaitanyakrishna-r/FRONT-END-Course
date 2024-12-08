@@ -1,0 +1,13 @@
+.container{
+    display: flex;
+    justify-content: center;
+    
+}
+.acitve{
+    color: rgb(241, 187, 9);
+    
+}
+.inactive{
+    color: black;
+    
+}
