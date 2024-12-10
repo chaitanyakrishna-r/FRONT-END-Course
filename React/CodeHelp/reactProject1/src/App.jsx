@@ -1,6 +1,7 @@
 import './App.css'
 // import UserCard from './components/UserCard'
-import Counter from './components/Counter/Counter'
+// import Counter from './components/Counter/Counter'
+import Cards from './components/Props/Cards'
 
 function App() {
   
@@ -12,8 +13,10 @@ function App() {
      <UserCard name={"alex"} desc={"hey i'm plumer"}/>
      <UserCard name={"jordon"} desc={"hey i'm player"}/> */}
   
-     <Counter/>
-      
+     <Cards name={'ckr'}>
+
+      <h1>Best web dev</h1>
+     </Cards>
     </div>
     </>
   )
