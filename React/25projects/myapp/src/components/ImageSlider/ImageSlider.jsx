@@ -26,7 +26,6 @@ const ImageSlider = ({url, page=1, limit=5}) => {
         
     }
 
-
     useEffect(()=>{
         if(url !=="")fetchImageUrl(url)
     },[url])

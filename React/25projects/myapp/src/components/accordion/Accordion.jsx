@@ -8,20 +8,29 @@ const Accordion = () => {
     const [multiSelection,setMultiSelection] = useState([]);
 
     const handleSingleAccordion =(getCurrentId)=>{
-        console.log(getCurrentId);
         setIsSelected(getCurrentId === isSelected ? null : getCurrentId);
     }
-    const handleMultiSelection = (getCurrentId)=>{
-        let cpyMultiple= [...multiSelection];
-        const findIndexOfCurrentId = cpyMultiple.indexOf(getCurrentId);
-        if(findIndexOfCurrentId === -1){
-            cpyMultiple.push(getCurrentId);
-        }else{
+    // const handleMultiSelection = (getCurrentId)=>{
+    //     let cpyMultiple= [...multiSelection];
+    //     const findIndexOfCurrentId = cpyMultiple.indexOf(getCurrentId);
+    //     if(findIndexOfCurrentId === -1){
+    //         cpyMultiple.push(getCurrentId);
+    //     }else{
             
-            cpyMultiple.splice(findIndexOfCurrentId,1)
-        }
-        setMultiSelection(cpyMultiple);
+    //         cpyMultiple.splice(findIndexOfCurrentId,1)
+    //     }
+    //     setMultiSelection(cpyMultiple);
+    // }
+
+    // using filter 
+    const handleMultiSelection = (getCurrentId)=>{
+        setMultiSelection((prev)=>{
+            return prev.includes(getCurrentId)
+            ?  prev.filter((id)=> id !== getCurrentId) //remove id from array
+            : [...prev,getCurrentId];//add id in array
+        })
     }
+
   return (
     <div className='wapper'>
         <button onClick={()=>{setEnableMulti(!enableMulti)}} >Enable {enableMulti ? "Single" : "Multiple"} Selection</button>
@@ -32,13 +41,13 @@ const Accordion = () => {
                     <span>+</span>
                 </div>
                 <div className='answer'>
-                    {
+                    {/* {
                         enableMulti ? multiSelection.indexOf(value.id) !== -1 &&(<div>{value.answer}</div>): value.id === isSelected && (
                             <div>{value.answer}</div>
                         )
-                    }
+                    } */}
 
-                    {/* {value.id ===isSelected? value.answer : null} */}
+                    {value.id ===isSelected || multiSelection.indexOf(value.id) !==-1 ?  value.answer : null}
                 </div>
             </div>))) : (<div> No data found</div>
             )}
