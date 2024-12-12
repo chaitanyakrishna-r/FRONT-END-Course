@@ -13,7 +13,9 @@ function App() {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div>
           <label >First Name: </label>
-          <input {...register('firstName',{ required: true, minLength: {value:3, message:'min len atleast 3' }
+          <input {...register('firstName',{ 
+            required: true, 
+            minLength: {value:3, message:'min len atleast 3' }
            })}/>
            {errors.firstName && <p>{errors.firstName.message}</p>}
         </div>
