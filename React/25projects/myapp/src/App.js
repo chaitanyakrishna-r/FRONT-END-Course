@@ -1,6 +1,7 @@
 
 import './App.css';
-import QrCode from './components/qrCodeGen/QrCode';
+import LightDarkMode from './components/LightDarkMode/LightDarkMode';
+// import QrCode from './components/qrCodeGen/QrCode';
 // import TreeView from './components/treeView/TreeView';
 // import menus from './components/treeView/data'
 
@@ -19,7 +20,8 @@ function App() {
     {/* <ImageSlider url={'https://picsum.photos/v2/list/'} page='1' limit='5'/> */}
     {/* <LoadMoreData/> */}
     {/* <TreeView menu={menus}/> */}
-    <QrCode/>
+    {/* <QrCode/> */}
+    <LightDarkMode/>
     </div>
   );
 }
