@@ -1,6 +1,7 @@
 
 import './App.css';
-import UserProfile from './components/GitHub/UserProfile';
+import SearchAutoComplete from './components/AutoComplete/SearchAutoComplete';
+// import UserProfile from './components/GitHub/UserProfile';
 // import TabTest from './components/CustomTabs/TabTest';
 // import ModalTestPopUp from './components/ModalPopUp/ModalTestPopUp';
 // import ScrollIndicator from './components/ScrollIndicator/ScrollIndicator';
@@ -29,7 +30,8 @@ function App() {
     {/* <ScrollIndicator url={'https://dummyjson.com/products?limit=100'}/> */}
     {/* <TabTest/> */}
     {/* <ModalTestPopUp/> */}
-    <UserProfile/>
+    {/* <UserProfile/> */}
+    <SearchAutoComplete/>
     </div>
   );
 }
