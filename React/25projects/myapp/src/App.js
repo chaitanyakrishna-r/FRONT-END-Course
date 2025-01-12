@@ -1,6 +1,7 @@
 
 import './App.css';
-import SearchAutoComplete from './components/AutoComplete/SearchAutoComplete';
+// import SearchAutoComplete from './components/AutoComplete/SearchAutoComplete';
+// import TicTacToe from './components/TicTacToe/TicTacToe';
 // import UserProfile from './components/GitHub/UserProfile';
 // import TabTest from './components/CustomTabs/TabTest';
 // import ModalTestPopUp from './components/ModalPopUp/ModalTestPopUp';
@@ -31,7 +32,8 @@ function App() {
     {/* <TabTest/> */}
     {/* <ModalTestPopUp/> */}
     {/* <UserProfile/> */}
-    <SearchAutoComplete/>
+    {/* <SearchAutoComplete/> */}
+    {/* <TicTacToe/> */}
     </div>
   );
 }
