@@ -22,7 +22,10 @@ let z = 12;
 //automatically ts will know this type of number
 //type annotation
 let u = 20;
-function print(a, b) {
+function customPrint(a, b) {
     console.log(a, b);
 }
-print(30, "ask");
+//mandatory to give all arguments as user 
+function abc(obj) {
+}
+abc({ name: "ckr", emial: "chaitany@gmail.com", age: 24 });

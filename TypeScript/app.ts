@@ -27,8 +27,22 @@ let z = 12;
 //type annotation
 let u:number = 20;
 
-function print(a:number, b:string): void{
+function customPrint(a:number, b:string){
     console.log(a,b)
 }
 
-print(30,"ask");
+
+
+
+// interface
+interface User{
+    name:String,
+    emial:String,
+    age?:number,//optional
+}
+
+//mandatory to give all arguments as user 
+function abc(obj: User){
+
+}
+abc({name:"ckr",emial:"chaitany@gmail.com",age:24});
