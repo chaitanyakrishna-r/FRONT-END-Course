@@ -29,3 +29,7 @@ function customPrint(a, b) {
 function abc(obj) {
 }
 abc({ name: "ckr", emial: "chaitany@gmail.com", age: 24 });
+function zyx(obj) {
+}
+let a;
+a = "ck";

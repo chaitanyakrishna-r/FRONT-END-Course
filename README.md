@@ -1,6 +1,6 @@
 Welcome to my Front-End Development Course repository! 🎉
 
-This repository is dedicated to my journey of learning front-end development, focusing on JavaScript and React. Here, you will find various projects, assignments, and exercises that I have completed as part of the course. Each project is a step towards mastering the essential skills needed to build dynamic and interactive web applications.
+This repository is dedicated to my journey of learning front-end development, focusing on JavaScript, React and Next JS. Here, you will find various projects, assignments, and exercises that I have completed as part of the course. Each project is a step towards mastering the essential skills needed to build dynamic and interactive web applications.
 
 What You'll Find Here
 JavaScript Projects: Basic to advanced JavaScript projects, demonstrating concepts such as DOM manipulation, event handling, API integration, and more.

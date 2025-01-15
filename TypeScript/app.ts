@@ -46,3 +46,33 @@ function abc(obj: User){
 
 }
 abc({name:"ckr",emial:"chaitany@gmail.com",age:24});
+
+interface Admin extends User{
+    admin:boolean,
+    password:number | string;
+}
+
+function zyx(obj: Admin){
+
+}
+
+//type aliases
+
+type argu = string| number| null;
+
+let a : argu ;
+a = "ck";
+
+//intersection types
+
+type ab = {
+    name:string,
+    email:string
+}
+
+// Intersection 
+type admin = ab & {
+    admin: boolean
+
+}
+
