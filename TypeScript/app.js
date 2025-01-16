@@ -14,7 +14,7 @@ var StatusCodes;
     StatusCodes["ABANDONED"] = "abandoned status code 500";
 })(StatusCodes || (StatusCodes = {}));
 //any , unknown, void
-function abcd() {
+function abcd5() {
     console.log("hello");
 }
 //types inference

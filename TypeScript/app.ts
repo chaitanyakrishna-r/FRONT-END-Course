@@ -17,7 +17,7 @@ enum StatusCodes{
 
 //any , unknown, void
 
-function abcd(): void{
+function abcd5(): void{
     console.log("hello");
 }
 
