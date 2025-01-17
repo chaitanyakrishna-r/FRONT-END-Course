@@ -1,5 +1,7 @@
 
 import './App.css';
+import FeaturedFlagGobalState from './components/FeaturedFlag/Context/Context';
+import FeaturedFlag from './components/FeaturedFlag/FeaturedFlag';
 // import SearchAutoComplete from './components/AutoComplete/SearchAutoComplete';
 // import TicTacToe from './components/TicTacToe/TicTacToe';
 // import UserProfile from './components/GitHub/UserProfile';
@@ -34,6 +36,10 @@ function App() {
     {/* <UserProfile/> */}
     {/* <SearchAutoComplete/> */}
     {/* <TicTacToe/> */}
+
+    <FeaturedFlagGobalState>
+      <FeaturedFlag/>
+    </FeaturedFlagGobalState>
     </div>
   );
 }
