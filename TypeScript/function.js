@@ -20,6 +20,7 @@ function many(...args) {
 }
 many(1, 2, 3, 4, 5, 6);
 function ab(a, b) {
+    //this call type narrowing
     if (typeof a === "string" && b === undefined) {
         console.log(a, "funciton 1");
     }
@@ -54,3 +55,45 @@ class bottles {
 }
 let bs1 = new bottles("milton");
 let bs2 = new bottles(12);
+function ui(a, b) {
+    return "hey"; //accpets or
+    return "hey"; //both are same as above
+    // return "hey" ;//not accpets
+    // return T;//accpets
+}
+ui("Hey", "hello");
+// types Assertion
+let a2;
+a2 = 123;
+
+//type guards
+function qwe(arg) {
+    if (typeof arg === "string") {
+    }
+}
+qwe(12);
+qwe("ckr");
+//class
+class Tvremote {
+    switchTvOff() {
+        console.log("switching off Tv remote");
+    }
+}
+class CarRemote {
+    switchCarOff() {
+        console.log("switching off car remote");
+    }
+}
+//using instanceof
+function switchOff(device) {
+    if (device instanceof Tvremote) {
+        device.switchTvOff();
+    }
+    else if (device instanceof CarRemote) {
+        device.switchCarOff();
+    }
+}
+//instaces
+let tv1 = new Tvremote();
+let car1 = new CarRemote();
+switchOff(tv1);

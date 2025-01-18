@@ -34,6 +34,8 @@ function ab(a:string):void;
 function ab(a:string, b:number): number;
 
 function ab(a:any, b?:any):any{
+
+    //this call type narrowing
     if(typeof a === "string" &&  b === undefined){
         console.log(a,"funciton 1");
     } 
@@ -80,3 +82,53 @@ class bottles<T>{
 }
 let bs1 = new bottles("milton");
 let bs2 = new bottles<number>(12);
+
+function ui<T>(a:T,b:T):T{
+    return "hey" as T;//accpets or
+    return <T> "hey"; //both are same as above
+    // return "hey" ;//not accpets
+    // return T;//accpets
+}
+ui<string>("Hey","hello");
+
+// types Assertion
+let a2:any;
+(a2 as number) = 123;
+(<number> a)= 12;
+
+//type guards
+function qwe(arg:string | number){
+    if(typeof arg === "string"){
+        
+    }
+}
+qwe (12);
+qwe ("ckr");
+//class
+class Tvremote{
+    switchTvOff(){
+        console.log("switching off Tv remote");
+    }
+}
+
+class CarRemote{
+    switchCarOff(){
+        console.log("switching off car remote");
+    }
+}
+
+//using instanceof
+function switchOff(device: Tvremote | CarRemote){
+    if(device instanceof Tvremote){
+        device.switchTvOff();
+    }
+    else if(device instanceof CarRemote){
+        device.switchCarOff();
+    }
+}
+
+//instaces
+let tv1 = new Tvremote();
+let car1 = new CarRemote();
+
+switchOff(tv1);
