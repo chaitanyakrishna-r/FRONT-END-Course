@@ -1,5 +1,6 @@
 
 import './App.css';
+import UseFetchHookTest from './components/CustomHooks/useFetch/testHook';
 import FeaturedFlagGobalState from './components/FeaturedFlag/Context/Context';
 import FeaturedFlag from './components/FeaturedFlag/FeaturedFlag';
 // import SearchAutoComplete from './components/AutoComplete/SearchAutoComplete';
@@ -37,9 +38,10 @@ function App() {
     {/* <SearchAutoComplete/> */}
     {/* <TicTacToe/> */}
 
-    <FeaturedFlagGobalState>
+    {/* <FeaturedFlagGobalState>
       <FeaturedFlag/>
-    </FeaturedFlagGobalState>
+    </FeaturedFlagGobalState> */}
+    <UseFetchHookTest/>
     </div>
   );
 }
