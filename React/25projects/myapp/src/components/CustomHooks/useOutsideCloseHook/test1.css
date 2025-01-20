@@ -1,0 +1,13 @@
+.container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.model{
+    background-color: beige;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
