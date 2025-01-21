@@ -5,6 +5,8 @@ import UseOutSideClose from './components/CustomHooks/useOutsideCloseHook/test1'
 import TestWindowResize from './components/CustomHooks/useWindowResize/TestWindowResize';
 import FeaturedFlagGobalState from './components/FeaturedFlag/Context/Context';
 import FeaturedFlag from './components/FeaturedFlag/FeaturedFlag';
+import ScrollToSection from './components/scrollToTopAndBottom/ScrollToSection';
+import ScrollToTopAndBottom from './components/scrollToTopAndBottom/ScrollToTopAndBottom';
 // import SearchAutoComplete from './components/AutoComplete/SearchAutoComplete';
 // import TicTacToe from './components/TicTacToe/TicTacToe';
 // import UserProfile from './components/GitHub/UserProfile';
@@ -45,7 +47,9 @@ function App() {
     </FeaturedFlagGobalState> */}
     {/* <UseFetchHookTest/> */}
     {/* <TestWindowResize/> */}
-    <UseOutSideClose/>
+    {/* <UseOutSideClose/> */}
+    {/* <ScrollToTopAndBottom/> */}
+    <ScrollToSection/>
     </div>
   );
 }
