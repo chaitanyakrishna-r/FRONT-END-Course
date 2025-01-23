@@ -30,7 +30,7 @@ const Weather = () => {
     // setSearch('');
   }
   function getCurrentDate() {
-    const date = new Date().toLocaleString("en-US", {
+    const date = new Date().toLocaleDateString("en-US", {
       weekday: "long",
       month: "long",
       day: "numeric",
