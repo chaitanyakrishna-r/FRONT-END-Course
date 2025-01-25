@@ -53,7 +53,7 @@ const Details = () => {
             }}
             className="p-3 px-8 rounded-lg text-sm uppercase font-medium tracking-wider mt-3  shadow-md bg-black text-white flex justify-center items-center gap-4"
           >
-            {favoritesList && favoritesList.lenght > 0 && favoritesList.findIndex(
+            {favoritesList.findIndex(
               (item) => item.id === recipeDetailsData?.recipe?.id
             ) !== -1 ? (
               <span>Remove from Favorites</span>
@@ -61,10 +61,7 @@ const Details = () => {
               <span>
                 {" "}
                 Save As Favorites
-                <FaRegBookmark
-                  className="text-white !important"
-                  color="white"
-                ></FaRegBookmark>{" "}
+                {" "}
               </span>
             )}
           </button>
