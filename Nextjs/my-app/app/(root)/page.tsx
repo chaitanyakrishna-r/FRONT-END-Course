@@ -1,7 +1,11 @@
 import Image from "next/image";
+import Hello from "../components/Hello";
+
 
 export default function Home() {
+  console.log("Server/client hello world")
   return (
+    
     // <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
     //   <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
     //     <Image
@@ -97,8 +101,11 @@ export default function Home() {
     //     </a>
     //   </footer>
     // </div>
-    <h1 className="text-3xl">
-      Hello my first next app
-    </h1>
+    <div>
+      <h1 className="text-3xl">
+       Welcome to  my first next app
+      </h1>
+      <Hello></Hello>
+    </div>
   );
 }
