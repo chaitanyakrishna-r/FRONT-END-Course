@@ -11,10 +11,7 @@ export default function Home() {
          </p>
         
       </section>
-      <section className="newPattern bg-slate-600 h-52">
-        <p className="">hellow</p>
-      </section>
-     
+      
     </>
   );
 }
